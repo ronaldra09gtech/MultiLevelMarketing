@@ -1,0 +1,26 @@
+RewriteEngine on
+Options -Indexes
+
+
+ErrorDocument 404  http://34.67.73.236/pilamokomlm/404
+ErrorDocument 403 http://34.67.73.236/pilamokomlm//404
+ErrorDocument 500 http://34.67.73.236/pilamokomlm/404
+
+
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]
+
+#to drop .php externally from url
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+RewriteRule ^ %1 [R=302,L]
+
+#to drop .php from url internally
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ members/$1 [L]

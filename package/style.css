@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.page-body {
+  background: #647df9;
+  background-image: url(https://cdn.jsdelivr.net/gh/froala/design-blocks@master/dist/imgs/shapes/1.svg);
+}
+
+.package-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  color: #fff !important;
+}
+
+.wrapper {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.wrapper .table {
+  background: #fff;
+  width: calc(33% - 20px);
+  padding: 30px 30px;
+  position: relative;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 0 12px 12px;
+}
+
+.table .price-section {
+  display: flex;
+  justify-content: center;
+}
+
+.table .price-area {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.price-area .inner-area {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  line-height: 117px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.price-area .inner-area .text {
+  font-size: 25px;
+  font-weight: 400;
+  position: absolute;
+  top: -34px;
+  left: 50px
+}
+
+.price-area .inner-area .price {
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.table .package-name {
+  width: 100%;
+  height: 2px;
+  margin: 35px 0;
+  position: relative;
+}
+
+.table .package-name span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 25px;
+  font-weight: 500;
+  background: #fff;
+  padding: 0 15px;
+  transform: translate(-50%, -50%);
+}
+
+.table .features li {
+  margin-bottom: 15px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.features li .list-name {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.features li .icon {
+  font-size: 15px;
+}
+
+.features li .icon.check {
+  color: #2db94d;
+}
+
+.features li .icon.cross {
+  color: #cd3241;
+}
+
+.table .btn {
+  width: 100%;
+  display: flex;
+  margin-top: 35px;
+  justify-content: center;
+}
+
+.table .btn button {
+  width: 80%;
+  height: 50px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.table .btn button:hover {
+  border-radius: 0px;
+}
+
+.gold {
+  border-right: 3px solid #ffd861;
+}
+
+.bronze {
+  border-right: 3px solid #a26bfa;
+}
+
+.basic {
+  border-right: 3px solid #43ef8b;
+}
+
+.silver {
+  border-right: 3px solid #e8e8e8;
+}
+
+.platinum {
+  border-right: 3px solid #3498db;
+}
+
+.btn button:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+
+
+.gold .features li::selection {
+  background: #ffd861;
+}
+
+.gold ::selection,
+.gold .price-area,
+.gold .inner-area {
+  background: #ffd861;
+}
+
+.gold .btn button {
+  border: 2px solid #ffd861;
+  background: #fff;
+  color: #ffd861;
+}
+
+.gold .active~.btn button {
+  color: #fff;
+  background: #ffd861;
+}
+
+.gold .btn button:hover {
+  background: #ffd861;
+  color: #fff;
+}
+
+.bronze ::selection,
+.bronze .price-area,
+.bronze .inner-area {
+  background: #a26bfa;
+}
+
+.bronze .btn button {
+  border: 2px solid #a26bfa;
+  background: #fff;
+  color: #a26bfa;
+}
+
+.bronze .btn button:hover {
+  background: #833af8;
+}
+
+.basic ::selection,
+.basic .price-area,
+.basic .inner-area {
+  background: #43ef8b;
+}
+
+.basic .btn button {
+  border: 2px solid #43ef8b;
+  color: #43ef8b;
+  background: #fff;
+}
+
+.basic .active~.btn button {
+  color: #fff;
+  background: #43ef8b;
+}
+
+
+.basic .btn button:hover {
+  background: #43ef8b;
+  color: #fff;
+}
+
+/* Platinum */
+.platinum ::selection,
+.platinum .price-area,
+.platinum .inner-area {
+  background: #3498db;
+}
+
+.platinum .btn button {
+  border: 2px solid #3498db;
+  color: #3498db;
+  background: #fff;
+}
+
+.platinum .btn button:hover {
+  background: #3498db;
+  color: #fff;
+}
+
+.platinum .active~.btn button {
+  color: #fff;
+  background: #3498db;
+}
+
+
+/* Platinum */
+
+/* Silver */
+.silver ::selection,
+.silver .price-area,
+.silver .inner-area {
+  background: silver;
+}
+
+.silver .btn button {
+  border: 2px solid silver;
+  color: silver;
+  background: #fff;
+}
+
+.silver .btn button:hover {
+  background: silver;
+  color: #fff;
+}
+
+.silver .active~.btn button {
+  color: #fff;
+  background: silver;
+}
+
+
+/* Silver */
+
+.gold .package-name {
+  background: #ffecb3;
+}
+
+.bronze .package-name {
+  background: #d0b3ff;
+}
+
+.basic .package-name {
+  background: #baf8d4;
+}
+
+.platinum .package-name {
+  background: #3498db;
+}
+
+.silver .package-name {
+  background: #e8e8e8;
+}
+
+
+@media (max-width: 1020px) {
+  .wrapper .table {
+    width: calc(50% - 20px);
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 698px) {
+  .wrapper .table {
+    width: 100%;
+  }
+}
+
+::selection {
+  color: #fff;
+}
+
+.table .ribbon {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  overflow: hidden;
+}
+
+.table .ribbon::before,
+.table .ribbon::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  display: block;
+  border: 7px solid #a26bfa;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+
+.table .ribbon::before {
+  top: -4px;
+  right: 10px;
+}
+
+.table .ribbon::after {
+  bottom: 9px;
+  left: -4px;
+}
+
+.table .ribbon span {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  transform: rotate(-45deg);
+  width: 200px;
+  background: #a26bfa;
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  font-size: 17px;
+  text-transform: uppercase;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+.basic .ribbon.active span {
+  background: #43ef8b;
+}
+
+.gold .ribbon.active span {
+  background: #ffd861;
+}
+
+.silver .ribbon.active span {
+  background: silver;
+}
+
+.platinum .ribbon.active span {
+  background: #3498db;
+}
+
+.bronze .ribbon.active span {
+  background: #a26bfa;
+}
+
+.basic .ribbon.active::before,
+.basic .ribbon.active::after {
+  border: 7px solid #43ef8b;
+}
+
+.gold .ribbon.active::before,
+.gold .ribbon.active::after {
+  border: 7px solid #ffd861;
+}
+
+.silver .ribbon.active::before,
+.silver .ribbon.active::after {
+  border: 7px solid silver;
+}
+
+.platinum .ribbon.active::before,
+.platinum .ribbon.active::after {
+  border: 7px solid #3498db;
+}
+
+.bronze .ribbon.active::before,
+.bronze .ribbon.active::after {
+  border: 7px solid #a26bfa;
+}
